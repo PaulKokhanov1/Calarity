@@ -5,6 +5,9 @@
       <map>
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_diary.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_foods.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_reports.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_social.xml" value="0.17395833333333333" />
       </map>
     </option>
   </component>

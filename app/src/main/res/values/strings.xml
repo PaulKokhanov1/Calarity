@@ -2,4 +2,9 @@
     <string name="app_name">Calarity</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="food_fragment">This is Food Fragment</string>
+    <string name="diary_fragment">This is Diary Fragment</string>
+    <string name="reports_fragment">This is Reports Fragment</string>
+    <string name="social_fragment">This is Social Fragment</string>
+
 </resources>

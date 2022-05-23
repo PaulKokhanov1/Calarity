@@ -9,57 +9,20 @@
         android:id="@+id/diaryFragment"
         android:name="com.example.calarity.DiaryFragment"
         android:label="fragment_diary"
-        tools:layout="@layout/fragment_diary" >
-        <action
-            android:id="@+id/action_diaryFragment_to_foodsFragment"
-            app:destination="@id/foodsFragment" />
-        <action
-            android:id="@+id/action_diaryFragment_to_reportsFragment"
-            app:destination="@id/reportsFragment" />
-        <action
-            android:id="@+id/action_diaryFragment_to_socialFragment"
-            app:destination="@id/socialFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_diary" />
     <fragment
         android:id="@+id/foodsFragment"
         android:name="com.example.calarity.FoodsFragment"
         android:label="fragment_foods"
-        tools:layout="@layout/fragment_foods" >
-        <action
-            android:id="@+id/action_foodsFragment_to_diaryFragment"
-            app:destination="@id/diaryFragment" />
-        <action
-            android:id="@+id/action_foodsFragment_to_reportsFragment"
-            app:destination="@id/reportsFragment" />
-        <action
-            android:id="@+id/action_foodsFragment_to_socialFragment"
-            app:destination="@id/socialFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_foods" />
     <fragment
         android:id="@+id/reportsFragment"
         android:name="com.example.calarity.ReportsFragment"
         android:label="fragment_reports"
-        tools:layout="@layout/fragment_reports" >
-        <action
-            android:id="@+id/action_reportsFragment_to_diaryFragment"
-            app:destination="@id/diaryFragment" />
-        <action
-            android:id="@+id/action_reportsFragment_to_socialFragment"
-            app:destination="@id/socialFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_reports" />
     <fragment
         android:id="@+id/socialFragment"
         android:name="com.example.calarity.SocialFragment"
         android:label="fragment_social"
-        tools:layout="@layout/fragment_social" >
-        <action
-            android:id="@+id/action_socialFragment_to_diaryFragment"
-            app:destination="@id/diaryFragment" />
-        <action
-            android:id="@+id/action_socialFragment_to_foodsFragment"
-            app:destination="@id/foodsFragment" />
-        <action
-            android:id="@+id/action_socialFragment_to_reportsFragment"
-            app:destination="@id/reportsFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_social" />
 </navigation>

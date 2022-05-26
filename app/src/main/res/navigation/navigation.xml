@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/diaryFragment"
-        android:name="com.example.calarity.DiaryFragment"
+        android:name="com.example.calarity.screens.Diary.DiaryFragment"
         android:label="fragment_diary"
         tools:layout="@layout/fragment_diary" />
     <fragment
         android:id="@+id/foodsFragment"
-        android:name="com.example.calarity.FoodsFragment"
+        android:name="com.example.calarity.screens.Foods.FoodsFragment"
         android:label="fragment_foods"
         tools:layout="@layout/fragment_foods" />
     <fragment
         android:id="@+id/reportsFragment"
-        android:name="com.example.calarity.ReportsFragment"
+        android:name="com.example.calarity.screens.Reports.ReportsFragment"
         android:label="fragment_reports"
         tools:layout="@layout/fragment_reports" />
     <fragment
         android:id="@+id/socialFragment"
-        android:name="com.example.calarity.SocialFragment"
+        android:name="com.example.calarity.screens.Social.SocialFragment"
         android:label="fragment_social"
         tools:layout="@layout/fragment_social" />
 </navigation>

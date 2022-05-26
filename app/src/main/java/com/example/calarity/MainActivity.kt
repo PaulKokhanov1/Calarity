@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        //Implementation in order to use bottom Navigation Bar
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.myNavHostFragment)
         bottomNavigationView.setupWithNavController(navController)

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
-tools:context=".ReportsFragment">
+tools:context=".screens.Reports.ReportsFragment">
 
 
 <androidx.constraintlayout.widget.ConstraintLayout

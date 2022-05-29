@@ -20,8 +20,11 @@ class MainActivity : AppCompatActivity() {
 
         //change this so this only shows when u navigate to the add fragment
         setupActionBarWithNavController(findNavController(R.id.myNavHostFragment))
+    }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.myNavHostFragment)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
 }

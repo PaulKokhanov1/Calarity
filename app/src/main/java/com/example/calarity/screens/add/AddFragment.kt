@@ -3,6 +3,7 @@ package com.example.calarity.screens.add
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -40,15 +41,15 @@ class AddFragment : Fragment() {
     private fun insertDataToDatabase(binding: FragmentAddBinding){
 
         val mealName = binding.addMealNameEt.text.toString()
-        val calories = binding.addCaloriesEt.text.toString()
-        val protein = binding.addProteinEt.text.toString()
-        val carbs = binding.addCarbsEt.text.toString()
-        val fats =  binding.addFatsEt.text.toString()
+        val calories = binding.addCaloriesEt.text
+        val protein = binding.addProteinEt.text
+        val carbs = binding.addCarbsEt.text
+        val fats =  binding.addFatsEt.text
 
         if (inputCheck(mealName, calories, protein, carbs, fats)){
             //Create Meal Object
 
-            val meal = Meal(0, mealName, calories.toDouble(), protein.toDouble(), carbs.toDouble(), fats.toDouble())
+            val meal = Meal(0, mealName, calories.toString().toDouble(), protein.toString().toDouble(), carbs.toString().toDouble(), fats.toString().toDouble())
 
             //Add Data to Database
             mealViewModel.addMeal(meal)
@@ -59,14 +60,13 @@ class AddFragment : Fragment() {
             Toast.makeText(requireContext(), "Please fill out all fields!", Toast.LENGTH_LONG).show()
         }
 
-
-
-
     }
 
-    private fun inputCheck(mealName: String, calories: String, protein: String, carbs: String, fats: String): Boolean{
-        return !(TextUtils.isEmpty(mealName) && TextUtils.isEmpty(calories) && TextUtils.isEmpty(protein)
-                && TextUtils.isEmpty(carbs) && TextUtils.isEmpty(fats))
+
+    private fun inputCheck(mealName: String, calories: Editable, protein: Editable, carbs: Editable, fats: Editable): Boolean{
+        return !(TextUtils.isEmpty(mealName) || calories.isEmpty() || protein.isEmpty()
+                || carbs.isEmpty() || fats.isEmpty())
+
     }
 
 }

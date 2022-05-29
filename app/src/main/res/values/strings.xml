@@ -10,5 +10,6 @@
     <string name="reports">Reports</string>
     <string name="foods">Foods</string>
     <string name="social">Social</string>
+    <string name="add_meal_to_database">Add Meal to database</string>
 
 </resources>

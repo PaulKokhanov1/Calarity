@@ -8,21 +8,34 @@
     <fragment
         android:id="@+id/diaryFragment"
         android:name="com.example.calarity.screens.Diary.DiaryFragment"
-        android:label="fragment_diary"
-        tools:layout="@layout/fragment_diary" />
+        android:label="Diary"
+        tools:layout="@layout/fragment_diary" >
+        <action
+            android:id="@+id/action_diaryFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
     <fragment
         android:id="@+id/foodsFragment"
         android:name="com.example.calarity.screens.Foods.FoodsFragment"
-        android:label="fragment_foods"
+        android:label="Foods"
         tools:layout="@layout/fragment_foods" />
     <fragment
         android:id="@+id/reportsFragment"
         android:name="com.example.calarity.screens.Reports.ReportsFragment"
-        android:label="fragment_reports"
+        android:label="Reports"
         tools:layout="@layout/fragment_reports" />
     <fragment
         android:id="@+id/socialFragment"
         android:name="com.example.calarity.screens.Social.SocialFragment"
-        android:label="fragment_social"
+        android:label="Social"
         tools:layout="@layout/fragment_social" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.calarity.screens.add.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+    </fragment>
 </navigation>

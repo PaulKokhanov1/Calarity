@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 }
 
@@ -128,5 +129,11 @@ dependencies {
     // UI
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    //RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+    // For control over item selection of both touch and mouse driven selection
+    implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
 
 }

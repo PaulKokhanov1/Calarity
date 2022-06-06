@@ -3,12 +3,14 @@ package com.example.calarity.screens.Reports
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.calarity.R
 import com.example.calarity.database.Meal
 import com.example.calarity.databinding.CustomRowBinding
 
-class ListAdapter() : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAdapter(val findNavController: NavController) : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
     class MyViewHolder(val binding: CustomRowBinding): RecyclerView.ViewHolder(binding.root) {
 
     }
@@ -30,6 +32,12 @@ class ListAdapter() : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.binding.proteinTxt.text = currentItem.Protein.toString()
         holder.binding.carbsTxt.text = currentItem.Carbs.toString()
         holder.binding.fatsTxt.text = currentItem.Fats.toString()
+
+        holder.binding.rowLayout.setOnClickListener {
+
+            val action = ReportsFragmentDirections.actionReportsFragmentToUpdateFragment(currentItem)
+            findNavController.navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

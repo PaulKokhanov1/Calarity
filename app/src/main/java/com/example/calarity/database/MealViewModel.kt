@@ -24,4 +24,22 @@ class MealViewModel(application: Application) : AndroidViewModel(application) {
             repository.addMeal(meal)
         }
     }
+
+    fun updateMeal(meal: Meal){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateMeal(meal)
+        }
+    }
+
+    fun deleteMeal(meal: Meal){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteMeal(meal)
+        }
+    }
+
+    fun deleteAllMeals(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAllMeals()
+        }
+    }
 }

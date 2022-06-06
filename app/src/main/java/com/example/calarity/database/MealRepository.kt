@@ -11,4 +11,16 @@ class MealRepository(private val mealDao: MealDao) {
     suspend fun addMeal(meal: Meal){
         mealDao.addMeal(meal)
     }
+
+    suspend fun updateMeal(meal: Meal){
+        mealDao.updateMeal(meal)
+    }
+
+    suspend fun deleteMeal(meal: Meal){
+        mealDao.deleteMeal(meal)
+    }
+
+    suspend fun deleteAllMeals(){
+        mealDao.deleteAllMeals()
+    }
 }

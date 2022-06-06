@@ -23,7 +23,11 @@
         android:id="@+id/reportsFragment"
         android:name="com.example.calarity.screens.Reports.ReportsFragment"
         android:label="Reports"
-        tools:layout="@layout/fragment_reports" />
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
     <fragment
         android:id="@+id/socialFragment"
         android:name="com.example.calarity.screens.Social.SocialFragment"
@@ -37,5 +41,17 @@
         <action
             android:id="@+id/action_addFragment_to_diaryFragment"
             app:destination="@id/diaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.calarity.screens.update.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update">
+        <action
+            android:id="@+id/action_updateFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <argument
+            android:name="currentMeal"
+            app:argType="com.example.calarity.database.Meal" />
     </fragment>
 </navigation>

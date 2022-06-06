@@ -1,9 +1,12 @@
 package com.example.calarity.database
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
 
+@Parcelize
 @Entity(tableName = "meal_table")
 data class Meal (
 
@@ -14,4 +17,4 @@ data class Meal (
     val Carbs: Double,
     val Protein: Double,
     val Fats: Double
-        )
+        ): Parcelable

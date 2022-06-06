@@ -2,14 +2,25 @@ package com.example.calarity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
+    private val viewModel: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //apparently there is a bug where this api will trigger the splash screen on any activity changes
+        installSplashScreen().apply {
+            setKeepOnScreenCondition{
+                viewModel.isLoading.value
+            }
+        }
         setContentView(R.layout.activity_main)
 
 

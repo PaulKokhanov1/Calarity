@@ -11,5 +11,8 @@
     <string name="foods">Foods</string>
     <string name="social">Social</string>
     <string name="add_meal_to_database">Add Meal to database</string>
+    <string name="add_breakfast">Add Breakfast</string>
+    <string name="add_lunch">Add Lunch</string>
+    <string name="add_dinner">Add Dinner</string>
 
 </resources>

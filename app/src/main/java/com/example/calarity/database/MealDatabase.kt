@@ -4,14 +4,23 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.calarity.database.breakfast.Breakfast
+import com.example.calarity.database.breakfast.BreakfastDAO
+import com.example.calarity.database.dinner.Dinner
+import com.example.calarity.database.dinner.DinnerDAO
+import com.example.calarity.database.lunch.Lunch
+import com.example.calarity.database.lunch.LunchDAO
 
 //Database Holder
 
-@Database(entities = [Meal::class], version = 1, exportSchema = false)
+@Database(entities = [Meal::class, Breakfast::class, Lunch::class, Dinner::class], version = 3, exportSchema = false)
 abstract class MealDatabase: RoomDatabase() {
 
-    //returns our Meal DAO
+    //returns our different DAO's
     abstract fun mealDao(): MealDao
+    abstract fun breakfastDao(): BreakfastDAO
+    abstract fun lunchDao(): LunchDAO
+    abstract fun dinnerDao(): DinnerDAO
 
     //visible to other classes
     companion object {
@@ -32,7 +41,9 @@ abstract class MealDatabase: RoomDatabase() {
                     context.applicationContext,
                     MealDatabase::class.java,
                     "meal_database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 return instance
 

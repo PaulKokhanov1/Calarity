@@ -13,6 +13,15 @@
         <action
             android:id="@+id/action_diaryFragment_to_addFragment"
             app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_addBreakfastFragment"
+            app:destination="@id/addBreakfastFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_addLunchFragment"
+            app:destination="@id/addLunchFragment" />
+        <action
+            android:id="@+id/action_diaryFragment_to_addDinnerFragment"
+            app:destination="@id/addDinnerFragment" />
     </fragment>
     <fragment
         android:id="@+id/foodsFragment"
@@ -53,5 +62,32 @@
         <argument
             android:name="currentMeal"
             app:argType="com.example.calarity.database.Meal" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBreakfastFragment"
+        android:name="com.example.calarity.screens.add.AddBreakfastFragment"
+        android:label="AddBreakfastFragment"
+        tools:layout="@layout/fragment_add_breakfast">
+        <action
+            android:id="@+id/action_addBreakfastFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLunchFragment"
+        android:name="com.example.calarity.screens.add.AddLunchFragment"
+        android:label="fragment_add_lunch"
+        tools:layout="@layout/fragment_add_lunch" >
+        <action
+            android:id="@+id/action_addLunchFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDinnerFragment"
+        android:name="com.example.calarity.screens.add.AddDinnerFragment"
+        android:label="fragment_add_dinner"
+        tools:layout="@layout/fragment_add_dinner" >
+        <action
+            android:id="@+id/action_addDinnerFragment_to_diaryFragment"
+            app:destination="@id/diaryFragment" />
     </fragment>
 </navigation>

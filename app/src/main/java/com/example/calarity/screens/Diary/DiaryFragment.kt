@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -29,8 +30,22 @@ class DiaryFragment : Fragment() {
         //initialize the ViewModel
         viewModel = ViewModelProvider(this).get(DiaryViewModel::class.java)
 
+
+        //could make this into a when statement
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_diaryFragment_to_addFragment)
+        }
+        binding.breakfastAddBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_diaryFragment_to_addBreakfastFragment)
+            Toast.makeText(requireContext(), "breakfast_btn", Toast.LENGTH_LONG).show()
+        }
+        binding.lunchAddBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_diaryFragment_to_addLunchFragment)
+            Toast.makeText(requireContext(), "lunch_btn", Toast.LENGTH_LONG).show()
+        }
+        binding.dinnerAddBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_diaryFragment_to_addDinnerFragment)
+            Toast.makeText(requireContext(), "dinner_btn", Toast.LENGTH_LONG).show()
         }
 
 

@@ -8,15 +8,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/diaryConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/diary_fragment"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="-16dp" />
+        android:layout_height="match_parent"
+        android:background="@drawable/green_half_oval">
 
         <!-- Add Breakfast -->
 
@@ -24,13 +17,15 @@
             android:id="@+id/breakfast_add_btn"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="176dp"
+            android:layout_marginTop="300dp"
             android:background="@drawable/database_button"
+            android:elevation="10dp"
             app:layout_constraintBottom_toTopOf="@+id/lunch_add_btn"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView2">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread">
 
             <ImageView
                 android:id="@+id/breakfast_banana"
@@ -45,7 +40,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_margin="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/breakfast_banana"
                 android:fontFamily="@font/montserrat_regular"
                 android:paddingStart="20dp"
@@ -60,17 +58,20 @@
 
         <!-- Add Lunch -->
 
+
         <RelativeLayout
             android:id="@+id/lunch_add_btn"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/database_button"
+            android:elevation="10dp"
             app:layout_constraintBottom_toTopOf="@+id/dinner_add_btn"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/breakfast_add_btn">
+            app:layout_constraintTop_toBottomOf="@id/breakfast_add_btn">
 
             <ImageView
                 android:id="@+id/lunch_muffin"
@@ -85,7 +86,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_margin="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/lunch_muffin"
                 android:fontFamily="@font/montserrat_regular"
                 android:paddingStart="20dp"
@@ -104,14 +108,13 @@
             android:id="@+id/dinner_add_btn"
             android:layout_width="275dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="72dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="90dp"
             android:background="@drawable/database_button"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lunch_add_btn">
+            app:layout_constraintTop_toBottomOf="@id/lunch_add_btn">
 
             <ImageView
                 android:id="@+id/dinner_taco"
@@ -126,7 +129,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_margin="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
                 android:layout_toEndOf="@+id/dinner_taco"
                 android:fontFamily="@font/montserrat_regular"
                 android:paddingStart="20dp"
@@ -146,10 +152,10 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="72dp"
             android:clickable="true"
+            android:contentDescription="@string/add_meal_to_database"
             android:focusable="true"
             android:src="@drawable/ic_add"
             android:tint="@android:color/white"
-            android:contentDescription="@string/add_meal_to_database"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

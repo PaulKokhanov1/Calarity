@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="button_green">#EDFED8</color>
+    <color name="overhead_green">#ADF793</color>
 </resources>

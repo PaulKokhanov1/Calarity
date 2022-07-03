@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/addBreakfastFragment"
         android:name="com.example.calarity.screens.add.AddBreakfastFragment"
-        android:label="AddBreakfastFragment"
+        android:label="Add Breakfast"
         tools:layout="@layout/fragment_add_breakfast">
         <action
             android:id="@+id/action_addBreakfastFragment_to_diaryFragment"
@@ -75,7 +75,7 @@
     <fragment
         android:id="@+id/addLunchFragment"
         android:name="com.example.calarity.screens.add.AddLunchFragment"
-        android:label="fragment_add_lunch"
+        android:label="Add Lunch"
         tools:layout="@layout/fragment_add_lunch" >
         <action
             android:id="@+id/action_addLunchFragment_to_diaryFragment"
@@ -84,7 +84,7 @@
     <fragment
         android:id="@+id/addDinnerFragment"
         android:name="com.example.calarity.screens.add.AddDinnerFragment"
-        android:label="fragment_add_dinner"
+        android:label="Add Dinner"
         tools:layout="@layout/fragment_add_dinner" >
         <action
             android:id="@+id/action_addDinnerFragment_to_diaryFragment"

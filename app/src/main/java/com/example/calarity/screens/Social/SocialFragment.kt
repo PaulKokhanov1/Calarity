@@ -5,14 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.ui.AppBarConfiguration
 import com.example.calarity.R
 import com.example.calarity.databinding.FragmentSocialBinding
 import com.example.calarity.screens.Diary.DiaryViewModel
 
 
-class SocialFragment : Fragment() {
+class SocialFragment : Fragment(){
 
 
     //reference to our ViewModel for Social Fragment
@@ -27,6 +29,13 @@ class SocialFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(SocialViewModel::class.java)
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+
+
     }
 
 }

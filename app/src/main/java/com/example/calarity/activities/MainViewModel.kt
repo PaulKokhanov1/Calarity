@@ -1,4 +1,4 @@
-package com.example.calarity
+package com.example.calarity.activities
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

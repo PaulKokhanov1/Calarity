@@ -1,12 +1,14 @@
-package com.example.calarity
+package com.example.calarity.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.calarity.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -29,10 +31,23 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.myNavHostFragment)
         bottomNavigationView.setupWithNavController(navController)
 
+        /**
+         * List of fragment that should not include the actionBar (i.e no back button in top left)
+         */
+        val appBarConfiguration = AppBarConfiguration
+            .Builder(
+                R.id.diaryFragment,
+                R.id.reportsFragment,
+                R.id.socialFragment,
+                R.id.foodsFragment
+            )
+            .build()
+
         //change this so this only shows when u navigate to the add fragment
-        setupActionBarWithNavController(findNavController(R.id.myNavHostFragment))
+        setupActionBarWithNavController(findNavController(R.id.myNavHostFragment), appBarConfiguration)
     }
 
+    //this is only responsible for making the back button work, it will be displayed regardless
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.myNavHostFragment)
         return navController.navigateUp() || super.onSupportNavigateUp()

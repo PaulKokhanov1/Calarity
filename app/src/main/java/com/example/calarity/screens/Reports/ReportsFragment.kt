@@ -43,7 +43,6 @@ class ReportsFragment : Fragment() {
 
         //initialize the ViewModel
         viewModel = ViewModelProvider(this).get(ReportsViewModel::class.java)
-
         setHasOptionsMenu(true)
 
         return binding.root

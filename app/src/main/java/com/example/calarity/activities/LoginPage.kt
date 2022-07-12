@@ -1,9 +1,13 @@
 package com.example.calarity.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.example.calarity.R
 import com.example.calarity.databinding.ActivityLoginPageBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -50,6 +54,11 @@ class LoginPage : AppCompatActivity() {
 
         binding.loginBtn.setOnClickListener {
             performLogin(binding)
+            hideKeyboard()
+        }
+
+        binding.tvForgotPassword.setOnClickListener {
+            startActivity(Intent(this@LoginPage, ForgotPasswordActivity::class.java))
         }
     }
 
@@ -83,4 +92,14 @@ class LoginPage : AppCompatActivity() {
             }
 
     }
+
+    private fun hideKeyboard(){
+        val view = this.currentFocus
+        if (view != null){
+            val hideMe = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hideMe.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+    }
+
 }

@@ -64,20 +64,23 @@
         android:layout_margin="20dp"/>
 
     <TextView
-        android:id="@+id/forgotpass"
+        android:id="@+id/tv_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_btn"
-        android:text="Forgot Password?"
-        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/textview_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/forgotpass"
+        android:layout_below="@id/tv_forgot_password"
         android:text="No Account? Register Here"
         android:textSize="15dp"
         android:textStyle="bold"

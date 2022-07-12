@@ -1,9 +1,12 @@
 package com.example.calarity.activities
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.example.calarity.R
 import com.example.calarity.databinding.ActivityLoginPageBinding
@@ -33,6 +36,7 @@ class RegisterActivity : AppCompatActivity() {
 
         binding.registerBtn.setOnClickListener{
             performSignUp(binding)
+            hideKeyboard()
         }
 
     }
@@ -64,5 +68,14 @@ class RegisterActivity : AppCompatActivity() {
             .addOnFailureListener {
                 Toast.makeText(this, "Error Occurred ${it.localizedMessage}", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun hideKeyboard(){
+        val view = this.currentFocus
+        if (view != null){
+            val hideMe = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hideMe.hideSoftInputFromWindow(view.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
     }
 }

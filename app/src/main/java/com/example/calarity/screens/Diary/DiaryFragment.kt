@@ -47,6 +47,10 @@ class DiaryFragment : Fragment() {
             findNavController().navigate(R.id.action_diaryFragment_to_addDinnerFragment)
             Toast.makeText(requireContext(), "dinner_btn", Toast.LENGTH_LONG).show()
         }
+        binding.goalsAddBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_diaryFragment_to_addGoalsFragment)
+            Toast.makeText(requireContext(), "Goals Button", Toast.LENGTH_LONG).show()
+        }
 
 
         return binding.root

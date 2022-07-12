@@ -19,6 +19,7 @@
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/drawable/test.xml" value="0.1" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/font/font.xml" value="0.20885416666666667" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/font/font_test.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/activity_forgot_password.xml" value="0.22" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/activity_login_page.xml" value="0.25" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/activity_register.xml" value="0.2" />
@@ -27,6 +28,7 @@
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_add.xml" value="0.25" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_add_breakfast.xml" value="0.265625" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_add_dinner.xml" value="0.19921875" />
+        <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_add_goals.xml" value="0.14628623188405798" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_add_lunch.xml" value="0.265625" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_add_test.xml" value="0.265625" />
         <entry key="..\:/Users/Vladimir/AndroidStudioProjects/Calarity/app/src/main/res/layout/fragment_diary.xml" value="0.2" />
